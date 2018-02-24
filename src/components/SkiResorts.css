@@ -3,6 +3,7 @@
   margin: 20px;
   border: 1px solid #ccc;
   border-radius: 20px;
+  min-width: 350px;
 }
 
 .SkiResortsList {
