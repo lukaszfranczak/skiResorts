@@ -5,6 +5,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      formOpen: false,
       skiResorts: [
         {
           name: 'Górka Szczęśliwicka',
@@ -15,6 +16,18 @@ class App extends Component {
         }
       ],
     }
+  }
+
+  toggleForm() {
+    this.setState(prevState => ({ formOpen: !prevState.formOpen }))
+  }
+
+  renderNewResortButton() {
+    return (
+      <button className='newResort' onClick={() => this.toggleForm()}>
+        +
+      </button>
+    )
   }
 
   renderSkiResort(resort) {
@@ -45,7 +58,7 @@ class App extends Component {
         <ul className="SkiResortsList">
           {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
           <li className='topLevel'>
-            <button className='newResort'>+</button>
+            {this.state.formOpen ? null : this.renderNewResortButton()}
           </li>
         </ul>
       </div>
