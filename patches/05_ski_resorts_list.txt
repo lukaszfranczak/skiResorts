@@ -1,0 +1,40 @@
+diff --git a/src/components/SkiResorts.css b/src/components/SkiResorts.css
+index 7e9b265..bed0e9f 100644
+--- a/src/components/SkiResorts.css
++++ b/src/components/SkiResorts.css
+@@ -4,3 +4,7 @@
+   border: 1px solid #ccc;
+   border-radius: 20px;
+ }
++
++.SkiResortsList {
++  list-style-type: none;
++}
+diff --git a/src/components/SkiResorts.jsx b/src/components/SkiResorts.jsx
+index 9f70ef5..1d8083a 100644
+--- a/src/components/SkiResorts.jsx
++++ b/src/components/SkiResorts.jsx
+@@ -2,9 +2,23 @@ import React, { Component } from 'react';
+ import './SkiResorts.css';
+
+ class App extends Component {
++  constructor(props) {
++    super(props)
++    this.state = {
++      skiResorts: [],
++    }
++  }
++
++  renderSkiResort(resort) {
++    return null
++  }
++
+   render() {
+     return (
+       <div className="SkiResortsWrapper">
++        <ul className="SkiResortsList">
++          {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
++        </ul>
+       </div>
+     );
+   }

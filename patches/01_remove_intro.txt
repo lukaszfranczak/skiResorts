@@ -1,0 +1,29 @@
+diff --git a/src/App.css b/src/App.css
+index c5c6e8a..f6a3a2d 100644
+--- a/src/App.css
++++ b/src/App.css
+@@ -18,10 +18,6 @@
+   font-size: 1.5em;
+ }
+ 
+-.App-intro {
+-  font-size: large;
+-}
+-
+ @keyframes App-logo-spin {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(360deg); }
+diff --git a/src/App.js b/src/App.js
+index 203067e..0f7cd46 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -10,9 +10,6 @@ class App extends Component {
+           <img src={logo} className="App-logo" alt="logo" />
+           <h1 className="App-title">Welcome to React</h1>
+         </header>
+-        <p className="App-intro">
+-          To get started, edit <code>src/App.js</code> and save to reload.
+-        </p>
+       </div>
+     );
+   }

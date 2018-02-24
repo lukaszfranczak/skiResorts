@@ -1,0 +1,40 @@
+diff --git a/src/components/SkiResorts.jsx b/src/components/SkiResorts.jsx
+index 535e1ab..dae4128 100644
+--- a/src/components/SkiResorts.jsx
++++ b/src/components/SkiResorts.jsx
+@@ -5,6 +5,7 @@ class App extends Component {
+   constructor(props) {
+     super(props)
+     this.state = {
++      formOpen: false,
+       skiResorts: [
+         {
+           name: 'Górka Szczęśliwicka',
+@@ -17,6 +18,18 @@ class App extends Component {
+     }
+   }
+ 
++  toggleForm() {
++    this.setState(prevState => ({ formOpen: !prevState.formOpen }))
++  }
++
++  renderNewResortButton() {
++    return (
++      <button className='newResort' onClick={() => this.toggleForm()}>
++        +
++      </button>
++    )
++  }
++
+   renderSkiResort(resort) {
+     return (
+       <li className='topLevel' key={resort.name}>
+@@ -45,7 +58,7 @@ class App extends Component {
+         <ul className="SkiResortsList">
+           {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
+           <li className='topLevel'>
+-            <button className='newResort'>+</button>
++            {this.state.formOpen ? null : this.renderNewResortButton()}
+           </li>
+         </ul>
+       </div>

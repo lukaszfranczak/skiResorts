@@ -1,0 +1,74 @@
+diff --git a/src/components/SkiResorts.css b/src/components/SkiResorts.css
+index bed0e9f..a07ca39 100644
+--- a/src/components/SkiResorts.css
++++ b/src/components/SkiResorts.css
+@@ -7,4 +7,23 @@
+
+ .SkiResortsList {
+   list-style-type: none;
++  text-align: initial;
++  padding: initial;
++}
++
++.SkiResortsList li.topLevel {
++  margin: 10px;
++  padding: 15px 0;
++  border: 1px solid #ccc;
++  border-radius: 15px;
++}
++
++.SkiResortsList header {
++  padding: 0 0 10px 25px;
++  font-size: 25px;
++  font-weight: bold;
++}
++
++.SkiResortsList li span.label {
++  font-weight: bold;
++  padding-right: 5px;
+ }
+diff --git a/src/components/SkiResorts.jsx b/src/components/SkiResorts.jsx
+index 1d8083a..997ac68 100644
+--- a/src/components/SkiResorts.jsx
++++ b/src/components/SkiResorts.jsx
+@@ -5,12 +5,38 @@ class App extends Component {
+   constructor(props) {
+     super(props)
+     this.state = {
+-      skiResorts: [],
++      skiResorts: [
++        {
++          name: 'Górka Szczęśliwicka',
++          height: '152 m',
++          price: '50 PLN',
++          opening_hours: '10:00-20:00',
++          opinion: 'Great place for beginners',
++        }
++      ],
+     }
+   }
+
+   renderSkiResort(resort) {
+-    return null
++    return (
++      <li className='topLevel' key={resort.name}>
++        <header>{resort.name}</header>
++        <ul>
++          <li>
++            <span className='label'>Height:</span>{resort.height}
++          </li>
++          <li>
++            <span className='label'>Price:</span>{resort.price}
++          </li>
++          <li>
++            <span className='label'>Opening hours:</span>{resort.opening_hours}
++          </li>
++          <li>
++            <span className='label'>Opinion:</span>{resort.opinion}
++          </li>
++        </ul>
++      </li>
++    )
+   }
+
+   render() {

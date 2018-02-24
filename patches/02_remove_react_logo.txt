@@ -1,0 +1,32 @@
+diff --git a/src/App.css b/src/App.css
+index f6a3a2d..83dd84e 100644
+--- a/src/App.css
++++ b/src/App.css
+@@ -2,14 +2,9 @@
+   text-align: center;
+ }
+ 
+-.App-logo {
+-  animation: App-logo-spin infinite 20s linear;
+-  height: 80px;
+-}
+-
+ .App-header {
+   background-color: #222;
+-  height: 150px;
++  height: 60px;
+   padding: 20px;
+   color: white;
+ }
+diff --git a/src/App.js b/src/App.js
+index 0f7cd46..e6c3f1e 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -7,7 +7,6 @@ class App extends Component {
+     return (
+       <div className="App">
+         <header className="App-header">
+-          <img src={logo} className="App-logo" alt="logo" />
+           <h1 className="App-title">Welcome to React</h1>
+         </header>
+       </div>

@@ -1,0 +1,22 @@
+diff --git a/src/components/SkiResorts.jsx b/src/components/SkiResorts.jsx
+index dae4128..fb6dc31 100644
+--- a/src/components/SkiResorts.jsx
++++ b/src/components/SkiResorts.jsx
+@@ -1,4 +1,5 @@
+ import React, { Component } from 'react';
++import NewResort from './NewResort'
+ import './SkiResorts.css';
+ 
+ class App extends Component {
+@@ -58,7 +59,10 @@ class App extends Component {
+         <ul className="SkiResortsList">
+           {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
+           <li className='topLevel'>
+-            {this.state.formOpen ? null : this.renderNewResortButton()}
++            {this.state.formOpen
++              ? <NewResort/>
++              : this.renderNewResortButton()
++            }
+           </li>
+         </ul>
+       </div>

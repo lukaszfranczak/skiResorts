@@ -1,0 +1,30 @@
+diff --git a/src/components/SkiResorts.css b/src/components/SkiResorts.css
+index 0ef4d08..2f34a3c 100644
+--- a/src/components/SkiResorts.css
++++ b/src/components/SkiResorts.css
+@@ -28,3 +28,11 @@
+   font-weight: bold;
+   padding-right: 5px;
+ }
++
++button.newResort {
++  margin-left: 20px;
++  padding: 0 15px 2px;
++  border-radius: 7px;
++  font-size: 23px;
++  font-weight: bold;
++}
+diff --git a/src/components/SkiResorts.jsx b/src/components/SkiResorts.jsx
+index 1832fe7..535e1ab 100644
+--- a/src/components/SkiResorts.jsx
++++ b/src/components/SkiResorts.jsx
+@@ -44,6 +44,9 @@ class App extends Component {
+       <div className="SkiResortsWrapper">
+         <ul className="SkiResortsList">
+           {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
++          <li className='topLevel'>
++            <button className='newResort'>+</button>
++          </li>
+         </ul>
+       </div>
+     );

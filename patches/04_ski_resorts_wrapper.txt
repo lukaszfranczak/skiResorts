@@ -1,0 +1,50 @@
+diff --git a/src/App.js b/src/App.js
+index 6da9f4a..db214f9 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -1,5 +1,6 @@
+ import React, { Component } from 'react';
+ import logo from './logo.svg';
++import SkiResorts from './components/SkiResorts';
+ import './App.css';
+
+ class App extends Component {
+@@ -9,6 +10,7 @@ class App extends Component {
+         <header className="App-header">
+           <h1 className="App-title">Ski Resorts</h1>
+         </header>
++        <SkiResorts/>
+       </div>
+     );
+   }
+diff --git a/src/components/SkiResorts.css b/src/components/SkiResorts.css
+new file mode 100644
+index 0000000..7e9b265
+--- /dev/null
++++ b/src/components/SkiResorts.css
+@@ -0,0 +1,6 @@
++.SkiResortsWrapper {
++  padding: 10px;
++  margin: 20px;
++  border: 1px solid #ccc;
++  border-radius: 20px;
++}
+diff --git a/src/components/SkiResorts.jsx b/src/components/SkiResorts.jsx
+new file mode 100644
+index 0000000..9f70ef5
+--- /dev/null
++++ b/src/components/SkiResorts.jsx
+@@ -0,0 +1,13 @@
++import React, { Component } from 'react';
++import './SkiResorts.css';
++
++class SkiResorts extends Component {
++  render() {
++    return (
++      <div className="SkiResortsWrapper">
++      </div>
++    );
++  }
++}
++
++export default SkiResorts;
