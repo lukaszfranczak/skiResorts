@@ -44,6 +44,9 @@ class App extends Component {
       <div className="SkiResortsWrapper">
         <ul className="SkiResortsList">
           {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
+          <li className='topLevel'>
+            <button className='newResort'>+</button>
+          </li>
         </ul>
       </div>
     );
