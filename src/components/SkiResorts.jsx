@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NewResort from './NewResort'
 import './SkiResorts.css';
 
 class App extends Component {
@@ -16,6 +17,16 @@ class App extends Component {
         }
       ],
     }
+    this.addResort = this.addResort.bind(this)
+  }
+
+  addResort(resort) {
+    if(Object.keys(resort).length) {
+      this.setState(prevState => ({
+        skiResorts: [...prevState.skiResorts, resort]
+      }))
+    }
+    this.toggleForm()
   }
 
   toggleForm() {
@@ -58,7 +69,10 @@ class App extends Component {
         <ul className="SkiResortsList">
           {this.state.skiResorts.map(resort => this.renderSkiResort(resort))}
           <li className='topLevel'>
-            {this.state.formOpen ? null : this.renderNewResortButton()}
+            {this.state.formOpen
+              ? <NewResort handleSubmit={this.addResort}/>
+              : this.renderNewResortButton()
+            }
           </li>
         </ul>
       </div>
