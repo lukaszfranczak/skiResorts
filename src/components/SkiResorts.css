@@ -7,4 +7,24 @@
 
 .SkiResortsList {
   list-style-type: none;
+  text-align: initial;
+  padding: initial;
+}
+
+.SkiResortsList li.topLevel {
+  margin: 10px;
+  padding: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.SkiResortsList header {
+  margin: 0 0 10px 25px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.SkiResortsList li span.label {
+  font-weight: bold;
+  padding-right: 5px;
 }

@@ -5,12 +5,38 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      skiResorts: [],
+      skiResorts: [
+        {
+          name: 'Górka Szczęśliwicka',
+          height: '152 m',
+          price: '50 PLN',
+          opening_hours: '10:00-20:00',
+          opinion: 'Great place for beginners',
+        }
+      ],
     }
   }
 
   renderSkiResort(resort) {
-    return null
+    return (
+      <li className='topLevel' key={resort.name}>
+        <header>{resort.name}</header>
+        <ul>
+          <li>
+            <span className='label'>Height:</span>{resort.height}
+          </li>
+          <li>
+            <span className='label'>Price:</span>{resort.price}
+          </li>
+          <li>
+            <span className='label'>Opening hours:</span>{resort.opening_hours}
+          </li>
+          <li>
+            <span className='label'>Opinion:</span>{resort.opinion}
+          </li>
+        </ul>
+      </li>
+    )
   }
 
   render() {
