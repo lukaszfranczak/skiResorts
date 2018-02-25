@@ -1,0 +1,12 @@
+diff --git a/src/components/SkiResorts.css b/src/components/SkiResorts.css
+index 2f34a3c..ec08f40 100644
+--- a/src/components/SkiResorts.css
++++ b/src/components/SkiResorts.css
+@@ -3,6 +3,7 @@
+   margin: 20px;
+   border: 1px solid #ccc;
+   border-radius: 20px;
++  min-width: 350px;
+ }
+ 
+ .SkiResortsList {

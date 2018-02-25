@@ -1,0 +1,36 @@
+diff --git a/src/components/NewResort.css b/src/components/NewResort.css
+new file mode 100644
+index 0000000..99d766c
+--- /dev/null
++++ b/src/components/NewResort.css
+@@ -0,0 +1,30 @@
++.newResortForm {
++  display: table;
++  position: relative;
++  width: 100%;
++  margin: 0 20px;
++}
++
++.newResortForm div {
++  display: table-row;
++}
++
++.newResortForm label {
++  display: table-cell;
++  padding-right: 5px;
++  width: 20%;
++  min-width: 140px;
++  font-weight: bold;
++}
++
++.newResortForm input {
++  display: table-cell;
++  width: 70%;
++}
++
++.submitButton {
++  padding: 5px;
++  margin-top: 10px;
++  border: 1px solid #ccc;
++  border-radius: 5px;
++}
